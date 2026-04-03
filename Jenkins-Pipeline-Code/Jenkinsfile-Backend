@@ -37,8 +37,7 @@ pipeline {
                 script {
                     waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token' 
                 }
-            }
-        
+            } 
         stage('Trivy File Scan') {
             steps {
                 dir('Application-Code/backend') {
